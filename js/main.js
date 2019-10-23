@@ -9,8 +9,8 @@
     }
     
     if ($divPersonagens.length) {
-        const episodios = await fazerRequisicao("character")
-        montarPersonagens(episodios)
+        const personagens = await fazerRequisicao("character")
+        montarPersonagens(personagens)
     }
     
     function montarEpisodios(episodios) {
@@ -40,6 +40,7 @@
             method: "GET",
             dataType: "json"
         }).done(function(data) {
+            console.log(data)
             result = data.results
         });
         
